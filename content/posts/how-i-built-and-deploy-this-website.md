@@ -1,6 +1,6 @@
 +++
 title = "How I Built and Deploy This Website"
-date = 2026-02-28T18:00:00+05:30
+date = 2026-02-28T10:00:00+05:30
 description = "A complete walkthrough of building a personal site with Hugo, deploying to staging on GitHub Pages, and shipping to production on a DigitalOcean droplet — all automated with GitHub Actions."
 tags = ["devops", "hugo", "infrastructure", "tutorial"]
 slug = "how-i-built-and-deploy-this-website"
