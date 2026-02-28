@@ -1,12 +1,15 @@
 <!-- View counter -->
 <script>
-  fetch("/api/counter")
+  fetch("https://abhijitmohanty.com/api/counter")
     .then(r => r.json())
     .then(d => {
       const el = document.getElementById("view-count");
       if (el) el.textContent = d.count.toLocaleString();
     })
-    .catch(() => {});
+    .catch(() => {
+      const el = document.getElementById("view-count");
+      if (el) el.parentElement.style.display = "none";
+    });
 </script>
 
 <!-- Decorative vine / branch SVGs (antfu.me inspired) -->
