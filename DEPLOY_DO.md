@@ -24,7 +24,7 @@ Rebuilds Hugo and deploys to DigitalOcean Droplet
 ```
 
 - **Staging** = GitHub Pages (free, automatic on every push to `main`)
-- **Production** = DigitalOcean Droplet at `143.110.253.218` (requires manual approval)
+- **Production** = DigitalOcean Droplet at `152.42.192.133` (ubuntu-sgp, requires manual approval)
 
 ## Approving a production deployment
 
@@ -64,8 +64,8 @@ ssh-keygen -t ed25519 -C "github-actions-deploy" -f ~/.ssh/do_deploy_key -N ""
 Copy the **public** key to the Droplet:
 
 ```bash
-ssh root@143.110.253.218 'mkdir -p /home/deploy/.ssh && cat >> /home/deploy/.ssh/authorized_keys' < ~/.ssh/do_deploy_key.pub
-ssh root@143.110.253.218 'chown -R deploy:deploy /home/deploy/.ssh && chmod 700 /home/deploy/.ssh && chmod 600 /home/deploy/.ssh/authorized_keys'
+ssh root@152.42.192.133 'mkdir -p /home/deploy/.ssh && cat >> /home/deploy/.ssh/authorized_keys' < ~/.ssh/do_deploy_key.pub
+ssh root@152.42.192.133 'chown -R deploy:deploy /home/deploy/.ssh && chmod 700 /home/deploy/.ssh && chmod 600 /home/deploy/.ssh/authorized_keys'
 ```
 
 Add the **private** key as a GitHub secret (see section below).
@@ -123,7 +123,7 @@ In [repo settings > Secrets > Actions](https://github.com/mohantyabhijit/mohanty
 
 | Secret | Value |
 |--------|-------|
-| `DO_HOST` | `143.110.253.218` |
+| `DO_HOST` | `152.42.192.133` |
 | `DO_USER` | `deploy` |
 | `DO_PORT` | `22` |
 | `DO_SSH_KEY` | Contents of `~/.ssh/do_deploy_key` (the private key) |
