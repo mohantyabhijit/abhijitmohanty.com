@@ -1,0 +1,389 @@
+:root {
+  --theme: #fff;
+  --entry: #ffffff;
+  --primary: #222;
+  --secondary: #999;
+  --tertiary: #e0ddd5;
+  --content: #555;
+  --hljs-bg: #1a1a2e;
+  --code-bg: #fafafa;
+  --border: #e5e2d9;
+  --main-width: 860px;
+  --nav-width: 980px;
+  --radius: 10px;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: #fff;
+  background-image: radial-gradient(circle, #ddd 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* override PaperMod .list background */
+body.list {
+  background-color: #fff;
+  background-image: radial-gradient(circle, #ddd 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* decorative vines */
+.vine-left,
+.vine-right {
+  position: fixed;
+  top: 0;
+  width: 160px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.12;
+}
+
+.vine-left {
+  left: 0;
+}
+
+.vine-right {
+  right: 0;
+}
+
+.vine-left svg,
+.vine-right svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* header */
+.header {
+  border-bottom: none;
+  background: transparent;
+  position: relative;
+  z-index: 10;
+}
+
+.logo a {
+  font-family: "Newsreader", serif;
+  font-style: italic;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--primary);
+}
+
+#menu a {
+  font-weight: 500;
+  color: #aaa;
+  transition: color 200ms ease;
+}
+
+#menu a span.active,
+#menu a:hover {
+  color: var(--primary);
+}
+
+/* main content */
+.main {
+  position: relative;
+  z-index: 1;
+  padding-top: 32px;
+}
+
+/* profile / home page */
+.profile-page {
+  max-width: 780px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.profile-page h1 {
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  margin-bottom: 0.8rem;
+  color: var(--primary);
+}
+
+.profile-copy {
+  font-size: 1.1rem;
+  line-height: 1.85;
+  color: var(--content);
+}
+
+.profile-copy p {
+  margin: 0 0 1rem;
+}
+
+.profile-copy a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-decoration-color: #ccc;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 200ms ease;
+}
+
+.profile-copy a:hover {
+  text-decoration-color: var(--primary);
+}
+
+/* post content (single article page) */
+.post-content {
+  font-size: 1.06rem;
+  line-height: 1.8;
+  color: var(--content);
+}
+
+/* blog list page */
+.posts-shell {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.posts-tabs {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.posts-tabs span {
+  font-size: clamp(1.9rem, 5vw, 3.2rem);
+  line-height: 1;
+  color: #d4d0c6;
+  font-family: "Newsreader", serif;
+  cursor: default;
+}
+
+.posts-tabs .active {
+  color: var(--primary);
+}
+
+.year-group {
+  position: relative;
+  margin: 1rem 0;
+}
+
+.post-line-list {
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-line-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin: 0;
+  padding: 0.55rem 0;
+}
+
+.post-line-list li:hover a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.post-line-list a {
+  font-size: 1.08rem;
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.post-line-list span {
+  color: var(--secondary);
+  font-size: 0.88rem;
+  white-space: nowrap;
+  margin-left: auto;
+}
+
+/* single post page */
+.post-title {
+  font-size: clamp(2.1rem, 5.8vw, 3.4rem);
+  line-height: 1.1;
+  color: var(--primary);
+}
+
+.post-meta {
+  color: #aaa;
+  font-size: 0.92rem;
+}
+
+.post-content h2,
+.post-content h3 {
+  margin-top: 36px;
+  color: var(--primary);
+}
+
+.post-content pre {
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.post-content code {
+  font-size: 0.9em;
+}
+
+.post-content blockquote {
+  border-inline-start: 3px solid #d4cfc3;
+  margin: 24px 0;
+  padding: 8px 18px;
+  background: rgba(255, 255, 252, 0.7);
+  color: var(--content);
+}
+
+.post-content img {
+  border-radius: var(--radius);
+}
+
+.post-content a {
+  text-decoration: underline;
+  text-decoration-color: #ccc;
+  text-underline-offset: 3px;
+}
+
+.post-content a:hover {
+  text-decoration-color: var(--primary);
+}
+
+/* footer */
+.footer {
+  border-top: none;
+  background: transparent;
+  color: #aaa;
+}
+
+/* social icons (PaperMod home) */
+.social-icons {
+  gap: 12px;
+}
+
+.social-icons a {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 7px;
+  background: #fff;
+  transition: border-color 200ms ease;
+}
+
+.social-icons a:hover {
+  border-color: var(--primary);
+}
+
+/* PaperMod post-entry cards (fallback if used) */
+.post-entry {
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 0;
+  padding: 20px 0;
+  background: transparent;
+}
+
+.post-entry:hover {
+  background: rgba(255, 255, 252, 0.6);
+}
+
+.entry-header h2 {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.entry-content {
+  color: var(--secondary);
+  font-size: 0.95rem;
+  -webkit-line-clamp: 3;
+}
+
+.entry-footer {
+  font-size: 0.86rem;
+  color: #bbb;
+}
+
+/* breadcrumbs / page header */
+.page-header h1 {
+  font-size: 2.2rem;
+}
+
+/* PaperMod first-entry / home-info */
+.first-entry.home-info {
+  min-height: auto;
+  margin-top: 8px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.home-info .entry-header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.08;
+  margin-bottom: 8px;
+}
+
+.home-info .entry-content {
+  color: var(--content);
+  font-size: 1.05rem;
+  line-height: 1.78;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  :root {
+    --gap: 16px;
+  }
+
+  body {
+    background-size: 20px 20px;
+  }
+
+  .vine-left,
+  .vine-right {
+    display: none;
+  }
+
+  .main {
+    padding-top: 18px;
+  }
+
+  .profile-page {
+    padding-top: 1rem;
+  }
+
+  .profile-copy,
+  .post-content {
+    font-size: 1rem;
+  }
+
+  .posts-tabs {
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .posts-tabs span {
+    font-size: clamp(1.6rem, 8vw, 2.4rem);
+  }
+
+  .year-group {
+    margin: 0.6rem 0;
+  }
+
+  .post-line-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+    padding: 0.45rem 0;
+  }
+
+  .post-line-list span {
+    font-size: 0.82rem;
+  }
+
+  .entry-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .post-entry {
+    padding: 16px 0;
+  }
+}

@@ -1,0 +1,26 @@
+{{ define "main" }}
+  <section class="posts-shell">
+    <header class="posts-header">
+      <div class="posts-tabs">
+        <span class="active">Blog</span>
+        <span>Talks</span>
+        <span>Podcasts</span>
+        <span>Streams</span>
+        <span>Notes</span>
+      </div>
+    </header>
+
+    {{ range .Pages.GroupByDate "2006" }}
+      <section class="year-group">
+        <ul class="post-line-list">
+          {{ range .Pages.ByDate.Reverse }}
+            <li>
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              <span>{{ .Date.Format "Jan 2" }} · {{ .ReadingTime }}min</span>
+            </li>
+          {{ end }}
+        </ul>
+      </section>
+    {{ end }}
+  </section>
+{{ end }}

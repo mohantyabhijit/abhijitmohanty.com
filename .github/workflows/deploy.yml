@@ -1,0 +1,55 @@
+name: Build and Deploy Hugo
+
+on:
+  push:
+    branches:
+      - main
+      - staging
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.157.0"
+          extended: true
+
+      - name: Set environment
+        id: env
+        run: |
+          if [ "${{ github.ref_name }}" = "main" ]; then
+            echo "base_url=https://abhijitmohanty.com/" >> "$GITHUB_OUTPUT"
+            echo "deploy_dir=/srv/blog" >> "$GITHUB_OUTPUT"
+            echo "label=production" >> "$GITHUB_OUTPUT"
+          else
+            echo "base_url=https://staging.abhijitmohanty.com/" >> "$GITHUB_OUTPUT"
+            echo "deploy_dir=/srv/blog-staging" >> "$GITHUB_OUTPUT"
+            echo "label=staging" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build site
+        run: hugo --minify --baseURL "${{ steps.env.outputs.base_url }}"
+
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DO_SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -p "${{ secrets.DO_PORT }}" "${{ secrets.DO_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Upload release and switch symlink
+        run: |
+          DEPLOY_DIR="${{ steps.env.outputs.deploy_dir }}"
+          TS=$(date +%Y%m%d%H%M%S)
+          REMOTE_RELEASE="$DEPLOY_DIR/releases/$TS"
+
+          ssh -p "${{ secrets.DO_PORT }}" "${{ secrets.DO_USER }}@${{ secrets.DO_HOST }}" "mkdir -p $REMOTE_RELEASE $DEPLOY_DIR/releases"
+          rsync -az --delete -e "ssh -p ${{ secrets.DO_PORT }}" public/ "${{ secrets.DO_USER }}@${{ secrets.DO_HOST }}:$REMOTE_RELEASE/"
+          ssh -p "${{ secrets.DO_PORT }}" "${{ secrets.DO_USER }}@${{ secrets.DO_HOST }}" "ln -sfn $REMOTE_RELEASE $DEPLOY_DIR/current && ls -1dt $DEPLOY_DIR/releases/* | tail -n +8 | xargs -r rm -rf"
+          echo "Deployed ${{ steps.env.outputs.label }} to $DEPLOY_DIR/current"
