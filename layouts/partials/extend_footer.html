@@ -1,3 +1,14 @@
+<!-- View counter -->
+<script>
+  fetch("/api/counter")
+    .then(r => r.json())
+    .then(d => {
+      const el = document.getElementById("view-count");
+      if (el) el.textContent = d.count.toLocaleString();
+    })
+    .catch(() => {});
+</script>
+
 <!-- Decorative vine / branch SVGs (antfu.me inspired) -->
 <div class="vine-left" aria-hidden="true">
   <svg viewBox="0 0 160 900" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin slice">
