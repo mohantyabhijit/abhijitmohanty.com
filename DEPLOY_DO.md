@@ -10,7 +10,7 @@ GitHub Actions builds Hugo
     │
     ▼
 Auto-deploys to GitHub Pages (staging preview)
-    https://mohantyabhijit.github.io/abhijitmohanty.com/
+    https://mohantyabhijit.github.io/
     │
     ▼
 You review the preview
@@ -28,7 +28,7 @@ Rebuilds Hugo and deploys to DigitalOcean Droplet
 
 ## Approving a production deployment
 
-1. Go to [Actions](https://github.com/mohantyabhijit/abhijitmohanty.com/actions)
+1. Go to [Actions](https://github.com/mohantyabhijit/mohantyabhijit.github.io/actions)
 2. Click the latest workflow run
 3. The `deploy-production` job will show "Waiting for review"
 4. Click "Review deployments", check "production", click "Approve and deploy"
@@ -119,7 +119,7 @@ sudo certbot --apache -d abhijitmohanty.com -d www.abhijitmohanty.com
 
 ### 6) GitHub repo secrets
 
-In [repo settings > Secrets > Actions](https://github.com/mohantyabhijit/abhijitmohanty.com/settings/secrets/actions), add:
+In [repo settings > Secrets > Actions](https://github.com/mohantyabhijit/mohantyabhijit.github.io/settings/secrets/actions), add:
 
 | Secret | Value |
 |--------|-------|
