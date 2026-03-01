@@ -60,17 +60,6 @@ enableRobotsTXT = true
     url = "/projects/"
     weight = 20
 
-  [[menu.main]]
-    identifier = "talks"
-    name = "Talks"
-    url = "/talks/"
-    weight = 30
-
-  [[menu.main]]
-    identifier = "sponsors"
-    name = "Sponsors"
-    url = "/sponsors/"
-    weight = 40
 
 [markup]
   [markup.goldmark]
