@@ -49,6 +49,12 @@ enableRobotsTXT = true
 
 [menu]
   [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 5
+
+  [[menu.main]]
     identifier = "posts"
     name = "Blog"
     url = "/posts/"
@@ -59,6 +65,12 @@ enableRobotsTXT = true
     name = "Projects"
     url = "/projects/"
     weight = 20
+
+  [[menu.main]]
+    identifier = "reads"
+    name = "Reads"
+    url = "/reads/"
+    weight = 30
 
 
 [markup]
