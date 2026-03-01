@@ -3,12 +3,8 @@ title = "Home"
 draft = false
 +++
 
-Hey! I am Abhijit, a software engineer focused on shipping reliable products with clean developer experience.
+I am a software engineer who works on data intensive backend applications. Among my other interests are creating full stack applications using AI tools.
 
-Working on web products, developer tooling, and practical AI workflows. I care about systems that stay simple, resilient, and maintainable over time.
+I play badminton and lift, and am currently based in Singapore.
 
-I write [blog posts](/posts) about engineering, architecture, and product execution. I also keep notes on workflows and lessons from projects in production.
-
-Outside programming, I enjoy design systems, photography, and exploring better ways to learn in public.
-
-Find me on [GitHub](https://github.com/abhijitmohanty) or subscribe via [RSS](/index.xml).
+Find me on [GitHub](https://github.com/mohantyabhijit) or subscribe via [RSS](/index.xml).
