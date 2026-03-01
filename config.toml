@@ -29,7 +29,7 @@ enableRobotsTXT = true
 
   [[params.socialIcons]]
     name = "github"
-    url = "https://github.com/abhijitmohanty"
+    url = "https://github.com/mohantyabhijit"
 
   [[params.socialIcons]]
     name = "rss"
