@@ -23,4 +23,4 @@ Coming soon.
 
 ---
 
-You can also browse active repositories on [GitHub](https://github.com/abhijitmohanty).
+You can also browse active repositories on [GitHub](https://github.com/mohantyabhijit).
