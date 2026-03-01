@@ -1,0 +1,184 @@
+{{ define "main" }}
+<section class="resume-page">
+
+  <div class="resume-top">
+    <div class="resume-top-left">
+      <h1>Abhijit Mohanty</h1>
+      <p class="resume-subtitle">Software Engineer</p>
+    </div>
+    <a href="/resume.pdf" class="resume-download-btn" download>
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Resume PDF
+    </a>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="resume-section">
+    <h2 class="resume-section-heading">Experience</h2>
+
+    <div class="resume-item">
+      <div class="resume-item-header">
+        <div class="resume-item-title-group">
+          <span class="resume-company">Juspay</span>
+          <span class="resume-location">Bengaluru, India</span>
+        </div>
+        <span class="resume-dates">Jul 2022 – Present</span>
+      </div>
+      <p class="resume-role">Software Engineer</p>
+      <ul class="resume-bullets">
+        <li>Built and maintained payments infrastructure handling millions of transactions daily, with a focus on reliability and fault tolerance.</li>
+        <li>Worked across the full stack on merchant-facing dashboards, backend API services, and internal developer tooling.</li>
+        <li>Contributed to improving observability and reducing MTTR through better logging, alerting, and runbook automation.</li>
+        <li>Collaborated with product and design to ship features from spec to production with clean, maintainable code.</li>
+      </ul>
+      <div class="resume-tags">
+        <span class="resume-tag">Haskell</span>
+        <span class="resume-tag">PureScript</span>
+        <span class="resume-tag">JavaScript</span>
+        <span class="resume-tag">PostgreSQL</span>
+        <span class="resume-tag">Redis</span>
+        <span class="resume-tag">AWS</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="resume-section">
+    <h2 class="resume-section-heading">Education</h2>
+
+    <div class="resume-item">
+      <div class="resume-item-header">
+        <div class="resume-item-title-group">
+          <span class="resume-company">National Institute of Technology Rourkela</span>
+          <span class="resume-location">Rourkela, India</span>
+        </div>
+        <span class="resume-dates">2018 – 2022</span>
+      </div>
+      <p class="resume-role">B.Tech, Computer Science and Engineering</p>
+    </div>
+
+  </div>
+
+  <!-- SKILLS -->
+  <div class="resume-section">
+    <h2 class="resume-section-heading">Skills</h2>
+
+    <div class="resume-skills-grid">
+      <div class="resume-skills-row">
+        <span class="resume-skills-label">Languages</span>
+        <div class="resume-tags">
+          <span class="resume-tag">Go</span>
+          <span class="resume-tag">JavaScript</span>
+          <span class="resume-tag">TypeScript</span>
+          <span class="resume-tag">Python</span>
+          <span class="resume-tag">Haskell</span>
+          <span class="resume-tag">PureScript</span>
+          <span class="resume-tag">Bash</span>
+        </div>
+      </div>
+      <div class="resume-skills-row">
+        <span class="resume-skills-label">Frameworks</span>
+        <div class="resume-tags">
+          <span class="resume-tag">React</span>
+          <span class="resume-tag">Node.js</span>
+          <span class="resume-tag">Hugo</span>
+          <span class="resume-tag">Express</span>
+        </div>
+      </div>
+      <div class="resume-skills-row">
+        <span class="resume-skills-label">Infrastructure</span>
+        <div class="resume-tags">
+          <span class="resume-tag">PostgreSQL</span>
+          <span class="resume-tag">Redis</span>
+          <span class="resume-tag">AWS</span>
+          <span class="resume-tag">DigitalOcean</span>
+          <span class="resume-tag">Docker</span>
+          <span class="resume-tag">Nginx</span>
+          <span class="resume-tag">Apache</span>
+          <span class="resume-tag">GitHub Actions</span>
+        </div>
+      </div>
+      <div class="resume-skills-row">
+        <span class="resume-skills-label">AI / LLM</span>
+        <div class="resume-tags">
+          <span class="resume-tag">LLaMA3</span>
+          <span class="resume-tag">OpenAI API</span>
+          <span class="resume-tag">Ollama</span>
+          <span class="resume-tag">Prompt Engineering</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURED PROJECTS -->
+  <div class="resume-section">
+    <h2 class="resume-section-heading">Projects</h2>
+
+    <div class="resume-project">
+      <div class="resume-project-header">
+        <span class="resume-project-name">Personal ChatGPT</span>
+        <div class="resume-project-links">
+          <a href="https://x.com/mohantyabhijit/status/1787160759480291476?s=46" target="_blank" rel="noopener">Demo ↗</a>
+          <a href="https://github.com/mohantyabhijit/mygpt" target="_blank" rel="noopener">Code ↗</a>
+        </div>
+      </div>
+      <p class="resume-project-desc">A self-hosted personal GPT service that runs a local LLaMA3 model. Built a Go-based backend server that exposes the model as an API, enabling a private ChatGPT-like experience without sending data to external providers.</p>
+      <div class="resume-tags">
+        <span class="resume-tag">Go</span>
+        <span class="resume-tag">LLaMA3</span>
+        <span class="resume-tag">Ollama</span>
+        <span class="resume-tag">REST API</span>
+      </div>
+    </div>
+
+    <div class="resume-project">
+      <div class="resume-project-header">
+        <span class="resume-project-name">Centralised Video Management Service</span>
+        <div class="resume-project-links">
+          <a href="https://docs.google.com/presentation/d/1JQ7QTJnVl2srONV45JFZlyPGCA0x_mxM/mobilepresent?slide=id.p1" target="_blank" rel="noopener">Demo ↗</a>
+        </div>
+      </div>
+      <p class="resume-project-desc">A platform for centralised ingestion, storage, and retrieval of video content. Designed for scalable media management with a clean API surface for upstream consumers.</p>
+      <div class="resume-tags">
+        <span class="resume-tag">Video Streaming</span>
+        <span class="resume-tag">Media Storage</span>
+        <span class="resume-tag">API Design</span>
+      </div>
+    </div>
+
+    <div class="resume-project">
+      <div class="resume-project-header">
+        <span class="resume-project-name">abhijitmohanty.com</span>
+        <div class="resume-project-links">
+          <a href="https://abhijitmohanty.com" target="_blank" rel="noopener">Visit ↗</a>
+          <a href="https://github.com/mohantyabhijit/mohantyabhijit.github.io" target="_blank" rel="noopener">Code ↗</a>
+        </div>
+      </div>
+      <p class="resume-project-desc">This site. A personal blog and portfolio built with Hugo and PaperMod, deployed to production on a DigitalOcean droplet via a two-stage GitHub Actions pipeline with manual approval for production releases.</p>
+      <div class="resume-tags">
+        <span class="resume-tag">Hugo</span>
+        <span class="resume-tag">GitHub Actions</span>
+        <span class="resume-tag">DigitalOcean</span>
+        <span class="resume-tag">Apache</span>
+      </div>
+    </div>
+
+    <div class="resume-project">
+      <div class="resume-project-header">
+        <span class="resume-project-name">plugsandsockets.org</span>
+        <div class="resume-project-links">
+          <a href="https://plugsandsockets.org" target="_blank" rel="noopener">Visit ↗</a>
+        </div>
+      </div>
+      <p class="resume-project-desc">A reference resource for global electrical plug and socket standards, covering outlet types, voltage, and frequency by country.</p>
+      <div class="resume-tags">
+        <span class="resume-tag">Web</span>
+        <span class="resume-tag">Reference</span>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+{{ end }}
