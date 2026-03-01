@@ -1,180 +1,208 @@
 {{ define "main" }}
 <section class="resume-page">
 
-  <div class="resume-top">
-    <div class="resume-top-left">
-      <h1>Abhijit Mohanty</h1>
-      <p class="resume-subtitle">Software Engineer</p>
-    </div>
-    <a href="/resume.pdf" class="resume-download-btn" download>
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      Resume PDF
+  <div class="resume-dl-row">
+    <a href="/resume.pdf" class="resume-dl-btn" download>
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download Resume
     </a>
   </div>
 
   <!-- EXPERIENCE -->
   <div class="resume-section">
-    <h2 class="resume-section-heading">Experience</h2>
+    <h2>Experience</h2>
+    <div class="jobs">
 
-    <div class="resume-item">
-      <div class="resume-item-header">
-        <div class="resume-item-title-group">
-          <span class="resume-company">Juspay</span>
-          <span class="resume-location">Bengaluru, India</span>
+      <div class="job">
+        <div class="time-place">
+          <div class="job__company-wrap">
+            <a href="https://grab.com" target="_blank" rel="noopener" class="job__company">Grab</a>
+            <span class="job__location">Singapore</span>
+          </div>
+          <span class="job__time">Jun 2022 – Present</span>
         </div>
-        <span class="resume-dates">Jul 2022 – Present</span>
+        <div class="job__title">Software Engineer – Backend</div>
+        <div class="job__stack">Golang · MySQL · FastAPI · Claude Sonnet · Apache Kafka</div>
+        <ul class="job__bullets">
+          <li>Architected and developed a centralized reconciliation platform unlocking end-to-end visibility of 25M+ transactions daily.</li>
+          <li>Led real-time cross-organisation integrations with banks and consumer-facing applications, increasing annual revenue by USD 3.5 million.</li>
+          <li>Migrated critical applications from GCP to AWS with zero downtime — 20% cost savings and 4× performance improvement.</li>
+          <li>Developed Snowflake MCP used by 10+ engineers to perform data analysis in natural language via their IDE.</li>
+          <li>Created an OnCall helper bot using LLMs and Chain of Thought prompting, reducing time to triage issues by 40%.</li>
+        </ul>
       </div>
-      <p class="resume-role">Software Engineer</p>
-      <ul class="resume-bullets">
-        <li>Built and maintained payments infrastructure handling millions of transactions daily, with a focus on reliability and fault tolerance.</li>
-        <li>Worked across the full stack on merchant-facing dashboards, backend API services, and internal developer tooling.</li>
-        <li>Contributed to improving observability and reducing MTTR through better logging, alerting, and runbook automation.</li>
-        <li>Collaborated with product and design to ship features from spec to production with clean, maintainable code.</li>
-      </ul>
-      <div class="resume-tags">
-        <span class="resume-tag">Haskell</span>
-        <span class="resume-tag">PureScript</span>
-        <span class="resume-tag">JavaScript</span>
-        <span class="resume-tag">PostgreSQL</span>
-        <span class="resume-tag">Redis</span>
-        <span class="resume-tag">AWS</span>
-      </div>
-    </div>
 
+      <div class="job">
+        <div class="time-place">
+          <div class="job__company-wrap">
+            <span class="job__company">UST Global</span>
+            <span class="job__location">India · (acquired Advalent Corporation)</span>
+          </div>
+          <span class="job__time">Apr 2020 – Jun 2021</span>
+        </div>
+        <div class="job__title">Senior Software Engineer – Platform Systems</div>
+        <div class="job__stack">Java · Spring Boot · MySQL</div>
+        <ul class="job__bullets">
+          <li>Led development of a high-reliability healthcare insurance system, scaling to 50K+ users and USD 6 million in annual revenue.</li>
+          <li>Upgraded and migrated the entire monolithic application to Java 11 in one week, ensuring backward compatibility and zero production incidents.</li>
+          <li>Designed a custom file ingestion framework, cutting integration time from 5 days to 1 day via reusable parsing architecture.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="time-place">
+          <div class="job__company-wrap">
+            <span class="job__company">Lothal Labs</span>
+            <span class="job__location">India</span>
+          </div>
+          <span class="job__time">Jan 2019 – Apr 2020</span>
+        </div>
+        <div class="job__title">Frontend Engineer – E-commerce Platform</div>
+        <div class="job__stack">React Native · Redux · AdobeXD</div>
+        <ul class="job__bullets">
+          <li>Joined as first engineering hire; designed end-to-end app user journeys.</li>
+          <li>Led UI/UX design and created a reusable internal design library to standardize patterns and accelerate delivery.</li>
+          <li>Developed and tested cross-platform React Native mobile app (iOS/Android) with Redux-based state management.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="time-place">
+          <div class="job__company-wrap">
+            <span class="job__company">Mindfire Solutions</span>
+            <span class="job__location">India</span>
+          </div>
+          <span class="job__time">Jul 2016 – Dec 2018</span>
+        </div>
+        <div class="job__title">Software Engineer</div>
+        <div class="job__stack">Java · Spring Boot · jQuery · Bootstrap · MySQL</div>
+        <ul class="job__bullets">
+          <li>Delivered end-to-end web application for finance analysts, reducing manual reporting from 24 hours to 6 hours.</li>
+          <li>Led a team of 6 developers and interfaced directly with clients for requirement gathering.</li>
+        </ul>
+      </div>
+
+    </div>
   </div>
 
   <!-- EDUCATION -->
   <div class="resume-section">
-    <h2 class="resume-section-heading">Education</h2>
+    <h2>Education</h2>
+    <div class="jobs">
 
-    <div class="resume-item">
-      <div class="resume-item-header">
-        <div class="resume-item-title-group">
-          <span class="resume-company">National Institute of Technology Rourkela</span>
-          <span class="resume-location">Rourkela, India</span>
+      <div class="job">
+        <div class="time-place">
+          <div class="job__company-wrap">
+            <span class="job__company">National University of Singapore</span>
+            <span class="job__location">Singapore</span>
+          </div>
+          <span class="job__time">2021 – 2022</span>
         </div>
-        <span class="resume-dates">2018 – 2022</span>
+        <div class="job__title">Master of Technology, Software Engineering &nbsp;·&nbsp; CAP 4.41 / 5.00</div>
       </div>
-      <p class="resume-role">B.Tech, Computer Science and Engineering</p>
-    </div>
 
+    </div>
   </div>
 
   <!-- SKILLS -->
   <div class="resume-section">
-    <h2 class="resume-section-heading">Skills</h2>
-
-    <div class="resume-skills-grid">
-      <div class="resume-skills-row">
-        <span class="resume-skills-label">Languages</span>
-        <div class="resume-tags">
-          <span class="resume-tag">Go</span>
-          <span class="resume-tag">JavaScript</span>
-          <span class="resume-tag">TypeScript</span>
-          <span class="resume-tag">Python</span>
-          <span class="resume-tag">Haskell</span>
-          <span class="resume-tag">PureScript</span>
-          <span class="resume-tag">Bash</span>
-        </div>
+    <h2>Skills</h2>
+    <div class="skillz">
+      <div class="skillz__category">
+        <div class="skillz__category__label">Languages</div>
+        <div class="skillz__category__item">Golang</div>
+        <div class="skillz__category__item">Java</div>
+        <div class="skillz__category__item">JavaScript</div>
       </div>
-      <div class="resume-skills-row">
-        <span class="resume-skills-label">Frameworks</span>
-        <div class="resume-tags">
-          <span class="resume-tag">React</span>
-          <span class="resume-tag">Node.js</span>
-          <span class="resume-tag">Hugo</span>
-          <span class="resume-tag">Express</span>
-        </div>
+      <div class="skillz__category">
+        <div class="skillz__category__label">Frontend</div>
+        <div class="skillz__category__item">React</div>
+        <div class="skillz__category__item">Redux</div>
+        <div class="skillz__category__item">jQuery · Bootstrap</div>
       </div>
-      <div class="resume-skills-row">
-        <span class="resume-skills-label">Infrastructure</span>
-        <div class="resume-tags">
-          <span class="resume-tag">PostgreSQL</span>
-          <span class="resume-tag">Redis</span>
-          <span class="resume-tag">AWS</span>
-          <span class="resume-tag">DigitalOcean</span>
-          <span class="resume-tag">Docker</span>
-          <span class="resume-tag">Nginx</span>
-          <span class="resume-tag">Apache</span>
-          <span class="resume-tag">GitHub Actions</span>
-        </div>
+      <div class="skillz__category">
+        <div class="skillz__category__label">Cloud</div>
+        <div class="skillz__category__item">AWS (EKS, Redshift)</div>
+        <div class="skillz__category__item">GCP (GKE, BigQuery)</div>
+        <div class="skillz__category__item">Apache Kafka</div>
       </div>
-      <div class="resume-skills-row">
-        <span class="resume-skills-label">AI / LLM</span>
-        <div class="resume-tags">
-          <span class="resume-tag">LLaMA3</span>
-          <span class="resume-tag">OpenAI API</span>
-          <span class="resume-tag">Ollama</span>
-          <span class="resume-tag">Prompt Engineering</span>
-        </div>
+      <div class="skillz__category">
+        <div class="skillz__category__label">Databases</div>
+        <div class="skillz__category__item">MySQL</div>
+        <div class="skillz__category__item">DynamoDB</div>
+        <div class="skillz__category__item">Redshift · BigQuery</div>
+      </div>
+      <div class="skillz__category">
+        <div class="skillz__category__label">Backend</div>
+        <div class="skillz__category__item">Spring Boot</div>
+        <div class="skillz__category__item">REST · Hibernate</div>
+        <div class="skillz__category__item">Microservices</div>
+      </div>
+      <div class="skillz__category">
+        <div class="skillz__category__label">Tools</div>
+        <div class="skillz__category__item">Git · Docker</div>
+        <div class="skillz__category__item">Maven · Jenkins</div>
+        <div class="skillz__category__item">Kubernetes</div>
       </div>
     </div>
   </div>
 
-  <!-- FEATURED PROJECTS -->
+  <!-- PROJECTS -->
   <div class="resume-section">
-    <h2 class="resume-section-heading">Projects</h2>
+    <h2>Projects</h2>
 
     <div class="resume-project">
-      <div class="resume-project-header">
-        <span class="resume-project-name">Personal ChatGPT</span>
-        <div class="resume-project-links">
-          <a href="https://x.com/mohantyabhijit/status/1787160759480291476?s=46" target="_blank" rel="noopener">Demo ↗</a>
-          <a href="https://github.com/mohantyabhijit/mygpt" target="_blank" rel="noopener">Code ↗</a>
-        </div>
+      <div class="resume-project__header">
+        <span class="resume-project__name">Personal ChatGPT</span>
+        <span class="resume-project__year">2024</span>
       </div>
-      <p class="resume-project-desc">A self-hosted personal GPT service that runs a local LLaMA3 model. Built a Go-based backend server that exposes the model as an API, enabling a private ChatGPT-like experience without sending data to external providers.</p>
-      <div class="resume-tags">
-        <span class="resume-tag">Go</span>
-        <span class="resume-tag">LLaMA3</span>
-        <span class="resume-tag">Ollama</span>
-        <span class="resume-tag">REST API</span>
+      <p class="resume-project__desc">Secure, full-stack personal ChatGPT instance with custom front end and local hosting to bypass commercial limitations.</p>
+      <ul class="resume-project__bullets">
+        <li>Implemented backend and frontend with locally running LLMs.</li>
+      </ul>
+      <div class="resume-project__stack">Ollama · Llama 3.1 · Go · React</div>
+      <div class="resume-project__links">
+        <a href="https://x.com/mohantyabhijit/status/1787160759480291476?s=46" target="_blank" rel="noopener">Demo ↗</a>
+        <a href="https://github.com/mohantyabhijit/mygpt" target="_blank" rel="noopener">Code ↗</a>
       </div>
     </div>
 
     <div class="resume-project">
-      <div class="resume-project-header">
-        <span class="resume-project-name">Centralised Video Management Service</span>
-        <div class="resume-project-links">
-          <a href="https://docs.google.com/presentation/d/1JQ7QTJnVl2srONV45JFZlyPGCA0x_mxM/mobilepresent?slide=id.p1" target="_blank" rel="noopener">Demo ↗</a>
-        </div>
+      <div class="resume-project__header">
+        <span class="resume-project__name">Centralized Video Gateway</span>
+        <span class="resume-project__year">2022</span>
       </div>
-      <p class="resume-project-desc">A platform for centralised ingestion, storage, and retrieval of video content. Designed for scalable media management with a clean API surface for upstream consumers.</p>
-      <div class="resume-tags">
-        <span class="resume-tag">Video Streaming</span>
-        <span class="resume-tag">Media Storage</span>
-        <span class="resume-tag">API Design</span>
-      </div>
-    </div>
-
-    <div class="resume-project">
-      <div class="resume-project-header">
-        <span class="resume-project-name">abhijitmohanty.com</span>
-        <div class="resume-project-links">
-          <a href="https://abhijitmohanty.com" target="_blank" rel="noopener">Visit ↗</a>
-          <a href="https://github.com/mohantyabhijit/mohantyabhijit.github.io" target="_blank" rel="noopener">Code ↗</a>
-        </div>
-      </div>
-      <p class="resume-project-desc">This site. A personal blog and portfolio built with Hugo and PaperMod, deployed to production on a DigitalOcean droplet via a two-stage GitHub Actions pipeline with manual approval for production releases.</p>
-      <div class="resume-tags">
-        <span class="resume-tag">Hugo</span>
-        <span class="resume-tag">GitHub Actions</span>
-        <span class="resume-tag">DigitalOcean</span>
-        <span class="resume-tag">Apache</span>
+      <p class="resume-project__desc">Full-stack web app to onboard and manage IP camera feeds across enterprise zones. Won Best Internship Project among 200+ students at NUS.</p>
+      <ul class="resume-project__bullets">
+        <li>Built low-latency live video gateway managing CCTV feeds at scale, replacing proprietary licensed software and saving $50K+ annually.</li>
+      </ul>
+      <div class="resume-project__stack">React · Java · WebRTC</div>
+      <div class="resume-project__links">
+        <a href="https://docs.google.com/presentation/d/1JQ7QTJnVl2srONV45JFZlyPGCA0x_mxM/mobilepresent?slide=id.p1" target="_blank" rel="noopener">Demo ↗</a>
       </div>
     </div>
 
     <div class="resume-project">
-      <div class="resume-project-header">
-        <span class="resume-project-name">plugsandsockets.org</span>
-        <div class="resume-project-links">
-          <a href="https://plugsandsockets.org" target="_blank" rel="noopener">Visit ↗</a>
-        </div>
+      <div class="resume-project__header">
+        <span class="resume-project__name">abhijitmohanty.com</span>
+        <span class="resume-project__year">2026</span>
       </div>
-      <p class="resume-project-desc">A reference resource for global electrical plug and socket standards, covering outlet types, voltage, and frequency by country.</p>
-      <div class="resume-tags">
-        <span class="resume-tag">Web</span>
-        <span class="resume-tag">Reference</span>
+      <p class="resume-project__desc">This site. A personal blog and portfolio built with Hugo, deployed to production on a DigitalOcean droplet via a two-stage GitHub Actions pipeline with manual approval for production releases.</p>
+      <div class="resume-project__stack">Hugo · GitHub Actions · DigitalOcean · Apache</div>
+      <div class="resume-project__links">
+        <a href="https://abhijitmohanty.com" target="_blank" rel="noopener">Visit ↗</a>
+        <a href="https://github.com/mohantyabhijit/mohantyabhijit.github.io" target="_blank" rel="noopener">Code ↗</a>
+      </div>
+    </div>
+
+    <div class="resume-project">
+      <div class="resume-project__header">
+        <span class="resume-project__name">plugsandsockets.org</span>
+        <span class="resume-project__year"></span>
+      </div>
+      <p class="resume-project__desc">Reference resource for global electrical plug and socket standards — outlet types, voltage, and frequency by country.</p>
+      <div class="resume-project__links">
+        <a href="https://plugsandsockets.org" target="_blank" rel="noopener">Visit ↗</a>
       </div>
     </div>
 
